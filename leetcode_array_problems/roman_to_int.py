@@ -16,4 +16,4 @@ print(result)
 s = ""
 for i in range(len(valid_string)):
     s += valid_string[i] + ""
-    print(s + " ")
+    print(s)
