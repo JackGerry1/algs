@@ -12,3 +12,8 @@ valid_string = string.upper()
 result = convert_roman(valid_string)
 print(result)
 
+# testing how the output of looping through a string would work if appending the characters to a new string
+s = ""
+for i in range(len(valid_string)):
+    s += valid_string[i] + ""
+    print(s + " ")
