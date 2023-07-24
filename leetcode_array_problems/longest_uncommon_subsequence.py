@@ -1,9 +1,8 @@
 def findLUSLength(a: str, b: str) -> int:
-    if len(a) != len(b) or a != b: 
-        return max(len(a), len(b))
-    else:
-        return -1
+    if a == b: return -1
+    
+    else: return max(len(a), len(b))
     
 print(findLUSLength("aba", "cdc"))
-print(findLUSLength("aaa", "bbb"))
+print(findLUSLength("aaa", "bbbbbbbbbdfgdfszgs"))
 print(findLUSLength("aaa", "aaa"))
