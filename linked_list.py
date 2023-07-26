@@ -44,6 +44,15 @@ class SinglyLinkedList:
         """
 
         return self.__count
+    def size(self):
+        current = self.head
+        count = 0
+
+        while current:
+            count += 1
+            current = current.next_node
+        
+        return count
 
     def add(self, data):
         """
@@ -105,24 +114,17 @@ class SinglyLinkedList:
 
     def node_at_index(self, index):
         """
-        Returns the Node at specified index
-        Takes O(n) time
+        Returns the node at the given index in the linked list.
+        Takes O(n) time.
         """
-
-        if index >= self.__count:
+        if index < 0 or index >= self.size():
             raise IndexError('index out of range')
-
-        if index == 0:
-            return self.head
-
-        current = self.head
-        position = 0
-
-        while position < index:
-            current = current.next_node
-            position += 1
-
-        return current
+        current_node = self.head
+        
+        for _ in range(index):
+            current_node = current_node.next_node
+        
+        return current_node
 
     def remove(self, key):
         """
