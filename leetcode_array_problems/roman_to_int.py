@@ -4,8 +4,10 @@ def convert_roman(string):
     for i in range(len(string)):
         if i + 1 < len(string) and roman[string[i]] < roman[string[i + 1]]:
             res -= roman[string[i]]
-        else: res += roman[string[i]]
+        else:
+            res += roman[string[i]]
     return res
+
 
 string = input("Enter a Roman Number: ")
 valid_string = string.upper()
